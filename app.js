@@ -28,6 +28,7 @@ dust.render('profile', data, function (err, out) {
 function createPdf(html) {
   var options = {
     format: 'Letter',
+    timeout: 60000,
     border: {
       top: '.75in',
       right: '.5in',
@@ -39,9 +40,13 @@ function createPdf(html) {
       contents: '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>'
     }
   };
-  pdf.create(html, options).toFile('./output/studentProfile.pdf', function (err, res) {
-    if (err) return console.log(err);
-    console.log(res); // { filename: '/profile.pdf' }
+
+  pdf.create(html, options).toStream(function(err, stream){
+    stream
+      .pipe(fs.createWriteStream('./output/studentProfile.pdf'))
+      .on('finish', () => {
+        console.log('pdf is now ready');
+      });
   });
 }
 
