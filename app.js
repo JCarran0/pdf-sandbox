@@ -42,6 +42,9 @@ http.createServer((request, response) => {
         let endTime = new Date().getTime();
         let elapsed = (endTime - startTime) / 1000;
         console.log('Elapsed time', elapsed, 'seconds');
+      })
+      .on('error', (err) => {
+        console.error(err);
       });
   });
 }).listen(PORT, function () {
@@ -50,9 +53,15 @@ http.createServer((request, response) => {
 
 
 function generateProfiles(data, callback) {
+
+  var html = '';
   // Insert data into the template
-  dust.render('profile', data, function (err, out) {
-    if (err) return callback(err);
+  dust.stream('profile', data)
+  .on('data', (segment) => {
+    html += segment;
+    console.log('new segment');
+  })
+  .on('end', () => {
     let options = {
       format: 'Letter',
       timeout: 60000,
@@ -68,7 +77,7 @@ function generateProfiles(data, callback) {
       }
     };
     // Converts HTML to PDF and returns a stream
-    pdf.create(out, options).toStream(callback);
+    pdf.create(html, options).toStream(callback);
   });
 }
 
