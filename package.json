@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "dustjs-helpers": "1.7.3",
+    "html-pdf": "^2.1.0",
     "lodash": "^4.13.1",
     "url": "^0.11.0"
   },

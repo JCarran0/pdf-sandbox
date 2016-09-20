@@ -14,7 +14,7 @@ gulp.task('compile', () => {
 });
 
 gulp.task('watch', function() {
-  gulp.watch([
+  watch([
     './*.js',
     './templates/*.html'
     ], ['compile']);
