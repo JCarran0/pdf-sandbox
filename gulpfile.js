@@ -8,7 +8,7 @@ gulp.task('default', ['watch']);
 
 gulp.task('compile', () => {
   console.log('compiling')
-  return gulp.src('templates/profile.html')
+  return gulp.src('templates/studentProfile.html')
     .pipe(dust())
     .pipe(gulp.dest('dist'));
 });
