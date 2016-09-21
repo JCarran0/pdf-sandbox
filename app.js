@@ -9,7 +9,6 @@ let pdf = require('html-pdf');
 let dust = require('dustjs-helpers');
 let _ = require('lodash');
 let studentFixture = fs.readFileSync('./fixtures/student.json', 'utf8');
-const NUM_STUDENT_COPIES = 1;
 
 http.createServer((request, response) => {
 
@@ -23,7 +22,7 @@ http.createServer((request, response) => {
   let studentFixtures = makeCopies(JSON.parse(studentFixture), numberOfCopies);
 
   //Pre-compile (via gulp) and render precompiled file at runtime
-  let compiled = fs.readFileSync('./dist/profile.js', 'utf8');
+  let compiled = fs.readFileSync('./dist/studentProfile.js', 'utf8');
   dust.loadSource(compiled);
 
   let data = {
@@ -56,7 +55,7 @@ function generateProfiles(data, callback) {
 
   var html = '';
   // Insert data into the template
-  dust.stream('profile', data)
+  dust.stream('studentProfile', data)
   .on('data', (segment) => {
     html += segment;
     console.log('new segment');
