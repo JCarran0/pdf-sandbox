@@ -4,690 +4,1379 @@
   "schoolStatus": "A",
   "schoolId": "13W320",
   "schemaVersion": "v1",
+  "mongoStatus": "ACCOUNTABLE",
   "attendanceDetails": {
-    "attendanceBySy": [
-      {
-        "year": "SY2013-14",
-        "percentageAttd": 0.95,
-        "percentDaysLate": null
+    "transit": {
+      "timeMinutes": 1,
+      "distanceMiles": 0
+    },
+    "currSy": {
+      "year": "SY2016-17",
+      "ytd": {
+        "percentLate": 0,
+        "daysAbsent": 0,
+        "daysLate": 0,
+        "percentPresentCat": "95+%",
+        "percentPresent": 1
       },
-      {
-        "year": "SY2014-15",
-        "percentageAttd": 0.97,
-        "percentDaysLate": 0.049
+      "last10Days": {
+        "abs": 9,
+        "late": 0
       },
-      {
-        "year": "SY2015-16",
-        "percentageAttd": 0.975,
-        "percentDaysLate": 0.062
+      "last5Days": {
+        "abs": 0,
+        "late": 0
       }
-    ],
-    "ytd": {
-      "daysLate": 10,
-      "daysAbsent": 4,
-      "percentPresentCat": "95+%"
     },
-    "last10Days": {
-      "late": 2,
-      "abs": 9
+    "priorSy": {
+      "year": "SY2015-16",
+      "finalPercentPresent": 0.96,
+      "finalPercentLate": 0.067,
+      "ytd": {
+        "percentPresent": null
+      }
     },
-    "last5Days": {
-      "late": 1,
-      "abs": 1
+    "twoSyPrior": {
+      "year": "SY2014-15",
+      "finalPercentPresent": 0.97
     },
-    "eighthGrade": null
+    "threeSyPrior": {
+      "year": "SY2013-14",
+      "finalPercentPresent": 0.95
+    },
+    "eighthGrade": {
+      "finalPercentPresent": null
+    }
+  },
+  "behaviorDetails": {
+    "suspensions": {
+      "currSy": {
+        "principal": null,
+        "superintendent": null
+      },
+      "history": [
+
+      ]
+    }
+  },
+  "charterDetails": {
+    "maxScoreActEnglish": null,
+    "isCharter": false,
+    "readingLexileTestDate": null,
+    "readingLexileMostRecent": null,
+    "readingRtiTier": null,
+    "mathScaledScoreTestDate": null,
+    "mathScaledScoreMostRecent": null,
+    "maxScoreActMath": null
   },
   "collegeDetails": {
-    "countOfApExamsWith3": null,
-    "countOfApExams": null,
-    "psatScores": [],
-    "satScores": [],
-    "maxScores": [],
-    "apScores": []
+    "ap": {
+      "countOfExamsWith3": null,
+      "countOfExams": null,
+      "examScoreHistory": [
+
+      ]
+    },
+    "psat": {
+      "examScoreHistory": [
+
+      ],
+      "maxScores": {
+        "reading": null,
+        "math": null,
+        "writing": null,
+        "total": null
+      }
+    },
+    "sat": {
+      "maxScores": {
+        "reading": null,
+        "math": null,
+        "writing": null,
+        "total1600": null,
+        "total2400": null
+      },
+      "examScoreHistory": [
+
+      ]
+    }
   },
   "atsContactDetails": {
-    "home": {
-      "apt": "2B",
-      "streetNum": "345 street",
-      "street": "345 street",
-      "city": "NYC",
-      "zip": "12345",
-      "email": null,
-      "phone": "917-000-0000"
-    },
     "adult1": {
-      "first": "Adult1",
-      "last": "LastAdult",
-      "phone": "212-000-0000"
+      "first": "KIMBERLY",
+      "last": "YOUNG",
+      "phone": null
     },
     "adult2": {
-      "first": "Adult2",
-      "last": "LastAdult2",
-      "phone": "347-000-0000"
+      "last": "YOUNG",
+      "phone": "(347)202-1547",
+      "first": "KIM"
     },
     "adult3": {
-      "first": "Adult3",
-      "last": "LastAdult3",
-      "phone": "646-000-0000"
+      "phone": null,
+      "first": null,
+      "last": null
+    },
+    "rbir": {
+      "streetNum": "64",
+      "apt": "4-E",
+      "adultFirst2": "KIM",
+      "ytdAttdPct": "100",
+      "lastName": "YOUNG",
+      "firstName": "ZAMAYA",
+      "adultFirst1": "KIMBERLY",
+      "city": "BROOKLYN",
+      "adultPhone3": "",
+      "adultLast2": "YOUNG",
+      "sex": "F",
+      "birthDt": "20090714",
+      "adultLast1": "YOUNG",
+      "street": "SAINT EDWARDS STREET",
+      "adultPhone2": "(347)202-1547",
+      "ddbnnn": "13K067",
+      "studentId": "200002525",
+      "grdCd": "120",
+      "offCls": "201",
+      "adultPhone1": "",
+      "adultLast3": "",
+      "st": "NY",
+      "email": "",
+      "adultFirst3": "",
+      "grdLvl": "02",
+      "zip": "11205",
+      "homePhone": "(347)645-4802"
+    },
+    "home": {
+      "streetNum": "64",
+      "street": "SAINT EDWARDS STREET",
+      "city": "BROOKLYN",
+      "zip": "11205",
+      "email": null,
+      "phone": "(347)645-4802",
+      "apt": "4-E"
     }
   },
   "creditDetails": {
-    "projectedTotal": 0,
-    "earned10PlusInPriorYr": null,
-    "historicalCredits": [],
-    "maxMp": [],
-    "nvSubjectsWithGaps": [
-      "ELA",
-      "Math",
-      "Plus One"
+    "transcript": [
+
     ],
-    "creditRecovery": {
-      "coreCreditsEarned": 0,
-      "coursesEligible": []
-    },
-    "currentYear": {
+    "projectedTotal": 0,
+    "currSy": {
+      "failed": null,
+      "projected3Of4Core": null,
       "attempted": 0,
-      "earned": null,
-      "earnedPlusScheduled": 0,
       "earned3Of4Core": null,
       "earnedCore": null,
       "earnedPlusScheduledCore": 0,
       "earnedOrScheduled3Of4Core": null,
-      "failed": null,
       "projected": null,
       "projected10Credits": false,
-      "projected3Of4Core": null
+      "mostRecentMps": {
+        "totalFailing": null,
+        "totalFailingHighPriority": null,
+        "byTermYear": [
+
+        ]
+      },
+      "earned": null,
+      "earnedPlusScheduled": 0
     },
-    "byArea": {
-      "art": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "cte": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "elaCore": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "elaOther": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "health": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "hpe": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "lote": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "math": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "misc": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "pe": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "sciCore": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "sciLife": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "sciOther": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "sciPhysical": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "sciTotal": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "ssEcon": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "ssElective": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "ssGlobal": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "ssGovt": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "ssGovtEcon": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "ssUs": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      },
-      "total": {
-        "earnedPlusScheduled": 0,
-        "attempted": 0,
-        "earned": 0,
-        "scheduled": 0,
-        "schoolCreditGap": null
-      }
+    "priorSy": {
+      "failed": null,
+      "earned10Plus": null
     },
-    "transcript": []
-  },
-  "cunyDetails": {
-    "creditsEarnedCurrentSchedGeom": 0,
-    "creditsEarnedCurrentSchedAlgebra2Trig": 0,
-    "creditsEarnedCurrentSchedPrecalculus": 0,
-    "creditsEarnedCurrentSchedCalculus": 0,
-    "nvCunyFlag": "No",
-    "elaRegentsCr": "No",
-    "mathRegentsCr": "No",
-    "elaCrAndMathCr": "No"
-  },
-  "ellDetails": {
-    "nyseslat": [],
-    "sife": false,
-    "lepStatus": null,
-    "testOutYr": null
-  },
-  "lastUpdateDetails": {
-    "stars": "2016-06-02",
-    "ats": "2016-06-02",
-    "sesis": "2000-01-01",
-    "collegeBoard": "2015-04-04",
-    "attendance": "2016-06-02",
-    "rdal": "2016-06-02"
-  },
-  "middleSchoolDetails": {
-    "promotedInSy": [
+    "summaryByYear": [
       {
-        "year": "SY2015-16",
-        "promoted": "Yes"
+        "schoolYear": null,
+        "attempted": 0,
+        "earned": 0,
+        "numCoursesFailed": 0
       }
     ],
-    "examScoreHistory": [],
-    "courseMarkHistory": [],
-    "stateExamSummary": []
-  },
-  "regentsDetails": {
-    "yearStartedHsMath": "SY2014-15",
-    "countOfNextScheduledStars": 0,
-    "numberPassed": {
-      "of5Local": "n/a",
-      "of5Regents": 0,
-      "of5Grad": 0,
-      "of5GradPriorToCurrentSy": 0,
-      "of9Advanced": 0
-    },
-    "maxScoreEla": {
-      "num": 64,
-      "string": "64"
-    },
-    "maxScoreSs": {
-      "num": null,
-      "string": null
-    },
-    "maxScoreScience": {
-      "num": null,
-      "string": null
-    },
-    "maxScoreMath": {
-      "num": 66,
-      "string": "66"
-    },
-    "maxScorePlus1": {
-      "num": null,
-      "string": null
-    },
-    "maxScoreLifeScience": {
-      "num": null,
-      "string": null
-    },
-    "maxScorePhysicalScience": {
-      "num": null,
-      "string": null
-    },
-    "gradCriticalNotInStarsCount": 0,
-    "gradCriticalNotInStars": [],
-    "nvNeededForAdvanced": [
-      "ELA",
-      "Global",
-      "US",
-      "Algebra",
-      "Geometry",
-      "Trig",
-      "Living Environment",
-      "Physical Science",
-      "LOTE"
-    ],
-    "nvNeededToBeOnTrackGrad": [],
-    "nvNeededToBeOnTrackCollege": [
-      "ELA",
-      "Math"
-    ],
-    "schedulingStatusStars": {
-      "of5": {
-        "ela": null,
-        "math": null,
-        "science": null,
-        "ss": "Not Passed/Not Sched",
-        "plus1": null
-      },
-      "of9": {
-        "ela": "Regents Status Placeholder",
-        "algebra": "Regents Status Placeholder",
-        "geometry": "Regents Status Placeholder",
-        "trigonometry": "Regents Status Placeholder",
-        "physicalScience": "Regents Status Placeholder",
-        "lifeScience": "Regents Status Placeholder",
-        "global": "Regents Status Placeholder",
-        "us": "Regents Status Placeholder",
-        "lote": "Regents Status Placeholder"
-      }
-    },
-    "examHistory": [
-      {
-        "exam": "CC Alg Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "CC ELA Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "CC Geometry Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "CC Trig Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "Chem Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "Comp ELA Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "Earth Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "Geometry Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "Global Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "Int Alg Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "Living Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "Physics Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "Trig Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "US Regents",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      },
-      {
-        "exam": "lote",
-        "maxScore": {
-          "num": null,
-          "string": null
-        },
-        "transcript": [],
-        "attempts": 0,
-        "schedStars": false
-      }
-    ],
-    "nvRecommendations": [
-      {
-        "exam": "Int Alg Regents",
-        "recommendation": "Not Eligible"
-      }
-    ]
-  },
-  "schoolDetails": {
-    "termStructure": 2,
-    "schoolId": "44B200",
-    "schoolName": "School for Teaching & Learning",
-    "schoolNick": "T&L",
-    "district": 13
-  },
-  "spedDetails": null,
-  "studentDetails": {
-    "potentiallyEligibleForSafetyNet": null,
-    "skedulaProfile": "skedula",
-    "gender": "F",
-    "dob": "2001-01-01",
-    "sorterId": "sorterId",
-    "classOrGrade": "01",
-    "currentGradeLevel": "01",
-    "classOf": null,
-    "dischargeCode": null,
-    "admitDate": "2002-01-01",
-    "sendingSchool": "non-DOE",
-    "email": null,
-    "cell": null,
-    "slc": null,
-    "ethnicity": "Black",
-    "iep": "No",
-    "capProgram": null,
-    "ell": false,
-    "officialClass": "999",
-    "freeOrReducedLunch": true,
-    "name": {
-      "first": "ZAMAYA",
-      "last": "YOUNG",
-      "lastFirst": "Last385397799, First2"
-    },
     "transcriptGradeAverage": {
       "year": "SY2015-16",
       "week": null,
       "gpa": null
     },
-    "testingModifications": [],
-    "attendedSummerSchool": [
-      {
-        "year": "SY2014-15",
-        "attended": true
-      }
-    ],
-    "progress": {
-      "grad": {
-        "num": null,
-        "string": null
+    "byArea": {
+      "total": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
       },
+      "cte": {
+        "scheduled": 0,
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0
+      },
+      "health": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      },
+      "misc": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      },
+      "pe": {
+        "schoolCreditGap": 0,
+        "scheduled": 0,
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0
+      },
+      "ssElective": {
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0,
+        "attempted": 0
+      },
+      "ssGovtEcon": {
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0,
+        "attempted": 0,
+        "earned": null
+      },
+      "ssUs": {
+        "scheduled": 0,
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0
+      },
+      "art": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      },
+      "elaOther": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      },
+      "lote": {
+        "scheduled": 0,
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0
+      },
+      "math": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      },
+      "sciCore": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 4,
+        "scheduled": 0
+      },
+      "sciOther": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      },
+      "ssGovt": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      },
+      "elaCore": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      },
+      "sciPhysical": {
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0,
+        "attempted": 0
+      },
+      "ssEcon": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      },
+      "ssGlobal": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      },
+      "hpe": {
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0,
+        "attempted": 0,
+        "earned": null
+      },
+      "sciLife": {
+        "schoolCreditGap": 0,
+        "scheduled": 0,
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0
+      },
+      "sciTotal": {
+        "attempted": 0,
+        "earned": null,
+        "earnedPlusScheduled": 0,
+        "schoolCreditGap": 0,
+        "scheduled": 0
+      }
+    },
+    "creditRecovery": {
+      "eligibleCoursesString": null,
+      "coreCreditsEarned": 0,
+      "coursesEligible": [
+
+      ]
+    },
+    "creditGaps": {
+      "subjectsWithGaps": [
+        "ELA",
+        "Math",
+        "Plus One"
+      ],
+      "maxGaps": null
+    }
+  },
+  "cunyDetails": {
+    "elaRegentsCr": "No",
+    "mathRegentsCr": "No",
+    "elaCrAndMathCr": "No",
+    "creditsEarnedCurrSchedGeom": 0,
+    "creditsEarnedCurrSchedAlgebra2Trig": 0,
+    "creditsEarnedCurrSchedPrecalculus": 0,
+    "creditsEarnedCurrSchedCalculus": 0,
+    "nvCunyFlag": "No"
+  },
+  "ellDetails": {
+    "lepStatus": null,
+    "testOutYr": null,
+    "nyseslat": {
+      "examScoreHistory": [
+        {
+          "nyseslat": null,
+          "year": "SY2014-15"
+        },
+        {
+          "year": "SY2013-14",
+          "nyseslat": null
+        },
+        {
+          "year": "SY2015-16",
+          "nyseslat": null
+        }
+      ],
+      "threeSyPrior": null,
+      "twoSyPrior": null,
+      "priorSy": null
+    },
+    "isEll": false,
+    "sife": false
+  },
+  "gradDetails": {
+    "threatsToGrad": {
+      "attendanceThreat": false,
+      "totalThreats": 0,
+      "courseFailureThreat": false,
+      "creditGapThreat": false,
+      "regentsThreat": false
+    },
+    "progress": {
       "cuny": {
-        "num": null,
-        "string": null
+        "num": 0,
+        "string": "ELA: No / Math: No"
       },
       "termsToGrad": {
         "num": 8,
-        "string": "8+ Terms"
+        "string": "8+ Term"
+      },
+      "grad": {
+        "num": 5,
+        "string": "7: On Track - Adv Regents"
       }
-    },
-    "threatsToGrad": {
-      "courseFailureThreat": false,
-      "creditGapThreat": false,
-      "regentsThreat": false,
-      "attendanceThreat": false,
-      "totalThreats": 0
-    },
-    "suspensions": [],
-    "transit": {
-      "timeMinutes": 27,
-      "distanceMiles": 2
+    }
+  },
+  "lastUpdateDetails": {
+    "stars": "2016-09-16",
+    "ats": "2016-09-16",
+    "sesis": "2000-01-01",
+    "collegeBoard": "2015-04-04",
+    "attendance": "2016-09-16",
+    "rdal": "2016-09-16"
+  },
+  "middleSchoolDetails": {
+    "courseMarkHistory": {
+      "eighthGrade": {
+        "ssCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        },
+        "sciCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        },
+        "year": null,
+        "elaCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        },
+        "mathCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        }
+      },
+      "seventhGrade": {
+        "elaCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        },
+        "mathCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        },
+        "ssCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        },
+        "sciCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        },
+        "year": null
+      },
+      "sixthGrade": {
+        "year": null,
+        "elaCoreMs": {
+          "mark": {
+            "string": null,
+            "num": null
+          }
+        },
+        "mathCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        },
+        "ssCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        },
+        "sciCoreMs": {
+          "mark": {
+            "num": null,
+            "string": null
+          }
+        }
+      }
     },
     "lowestThird": {
       "citywide": null,
       "nv": null,
       "school": null
+    },
+    "promotedInSy": [
+      {
+        "year": "SY2016-17",
+        "promoted": null
+      }
+    ],
+    "examScoreSummary": {
+      "pr8thGrade": {
+        "rd": null,
+        "ma": null,
+        "avg": null
+      },
+      "pr7thGrade": {
+        "ma": null,
+        "avg": null,
+        "rd": null
+      }
+    },
+    "examScoreHistory": [
+
+    ]
+  },
+  "regentsDetails": {
+    "countOfNextSchedStars": 0,
+    "yearStartedHsMath": "SY14-15",
+    "needed": {
+      "onTrack": {
+        "advanced": [
+
+        ],
+        "collegeReady": [
+
+        ],
+        "local": [
+          "Plus 1"
+        ],
+        "regents": [
+          "Geom"
+        ],
+        "grad": [
+          "Plus 1"
+        ]
+      },
+      "all": {
+        "regents": [
+          "Math",
+          "Plus 1"
+        ],
+        "grad": [
+          "Math",
+          "Plus 1"
+        ],
+        "advanced": [
+          "Alg",
+          "LOTE"
+        ],
+        "collegeReady": [
+          "Math"
+        ],
+        "local": [
+          "Math",
+          "Plus 1"
+        ]
+      }
+    },
+    "numberPassed": {
+      "of5Local": "0 (Not Eligible)",
+      "of5Regents": 0,
+      "of9Advanced": 0,
+      "of5Grad": 0,
+      "of5GradPriorToCurrSy": 0
+    },
+    "mostRecentRegentsAttempts": {
+      "global": {
+        "humanReadableKey": "Global",
+        "date": ""
+      },
+      "ccAlg": {
+        "humanReadableKey": "CC Algebra",
+        "date": ""
+      },
+      "compEla": {
+        "humanReadableKey": "English",
+        "date": ""
+      },
+      "ccTrig": {
+        "humanReadableKey": "CC Trig",
+        "date": ""
+      },
+      "lote": {
+        "humanReadableKey": "LOTE",
+        "date": ""
+      },
+      "earth": {
+        "humanReadableKey": "Earth Sci",
+        "date": ""
+      },
+      "us": {
+        "humanReadableKey": "U.S.",
+        "date": ""
+      },
+      "ccEla": {
+        "date": "",
+        "humanReadableKey": "CC ELA"
+      },
+      "geom": {
+        "humanReadableKey": "Geom",
+        "date": ""
+      },
+      "trig": {
+        "humanReadableKey": "Trig",
+        "date": ""
+      },
+      "physics": {
+        "humanReadableKey": "Physics",
+        "date": ""
+      },
+      "intAlg": {
+        "humanReadableKey": "Algebra",
+        "date": ""
+      },
+      "ccGeom": {
+        "date": "",
+        "humanReadableKey": "CC Geom"
+      },
+      "livingEnv": {
+        "humanReadableKey": "Liv. Env.",
+        "date": ""
+      },
+      "chem": {
+        "humanReadableKey": "Chemistry",
+        "date": ""
+      }
+    },
+    "countOfNeededNotSchedStars": 0,
+    "byCategory5": {
+      "sci": {
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        },
+        "schedStatusStars": null,
+        "regentsName": "Living Regents"
+      },
+      "ss": {
+        "regentsName": "Global Regents",
+        "maxScore": {
+          "string": "0",
+          "num": null
+        },
+        "schedStatusStars": null
+      },
+      "plus1": {
+        "schedStatusStars": null,
+        "regentsName": "US Regents",
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        }
+      },
+      "math": {
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        },
+        "schedStatusStars": null,
+        "regentsName": "CC Alg Regents"
+      },
+      "ela": {
+        "schedStatusStars": null,
+        "regentsName": "CC ELA Regents",
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        }
+      }
+    },
+    "byCategory9": {
+      "us": {
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        },
+        "schedStatusStars": null,
+        "regentsName": "US Regents"
+      },
+      "lifeSci": {
+        "regentsName": "Living Regents",
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        },
+        "schedStatusStars": null
+      },
+      "geom": {
+        "regentsName": "CC Geometry Regents",
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        },
+        "schedStatusStars": null
+      },
+      "alg": {
+        "regentsName": "CC Alg Regents",
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        },
+        "schedStatusStars": null
+      },
+      "trig": {
+        "regentsName": "CC Trig Regents",
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        },
+        "schedStatusStars": null
+      },
+      "physSci": {
+        "regentsName": "Earth Regents",
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        },
+        "schedStatusStars": null
+      },
+      "lote": {
+        "regentsName": "lote",
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        },
+        "schedStatusStars": null
+      },
+      "global": {
+        "regentsName": "Global Regents",
+        "maxScore": {
+          "string": "0",
+          "num": null
+        },
+        "schedStatusStars": null
+      },
+      "ela": {
+        "schedStatusStars": null,
+        "regentsName": "CC ELA Regents",
+        "maxScore": {
+          "num": null,
+          "string": "0"
+        }
+      }
+    },
+    "byExam": {
+      "livingEnv": {
+        "transcript": [
+
+        ],
+        "exam": "Living Regents",
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ]
+      },
+      "intAlg": {
+        "recommendation": "Not Eligible",
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ],
+        "exam": "Int Alg Regents",
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false
+      },
+      "global": {
+        "exam": "Global Regents",
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ]
+      },
+      "earth": {
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ],
+        "exam": "Earth Regents",
+        "attempts": 0,
+        "maxScore": {
+          "string": null,
+          "num": null
+        }
+      },
+      "ccTrig": {
+        "transcript": [
+
+        ],
+        "exam": "CC Trig Regents",
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ]
+      },
+      "physics": {
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ],
+        "exam": "Physics Regents",
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false
+      },
+      "ccAlg": {
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ],
+        "exam": "CC Alg Regents"
+      },
+      "ccGeom": {
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ],
+        "exam": "CC Geometry Regents",
+        "attempts": 0
+      },
+      "oldGeom": {
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ],
+        "exam": "Geometry Regents"
+      },
+      "compEla": {
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ],
+        "exam": "Comp ELA Regents",
+        "attempts": 0,
+        "maxScore": {
+          "string": null,
+          "num": null
+        }
+      },
+      "oldTrig": {
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ],
+        "exam": "Trig Regents",
+        "attempts": 0
+      },
+      "us": {
+        "exam": "US Regents",
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ]
+      },
+      "chem": {
+        "exam": "Chem Regents",
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ]
+      },
+      "ccEla": {
+        "schedInStars": false,
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ],
+        "exam": "CC ELA Regents",
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        }
+      },
+      "lote": {
+        "recommendation": null,
+        "recommendationRationale": [
+
+        ],
+        "transcript": [
+
+        ],
+        "exam": "lote",
+        "attempts": 0,
+        "maxScore": {
+          "num": null,
+          "string": null
+        },
+        "schedInStars": false
+      }
+    },
+    "regentsTranscript": {
+      "ccGeom": [
+        {
+          "school": "",
+          "mark": "",
+          "humanReadableKey": "CC Geom",
+          "date": ""
+        }
+      ],
+      "ccTrig": [
+        {
+          "humanReadableKey": "CC Trig",
+          "date": "",
+          "school": "",
+          "mark": ""
+        }
+      ],
+      "global": [
+        {
+          "humanReadableKey": "Global",
+          "date": "",
+          "school": "",
+          "mark": ""
+        }
+      ],
+      "livingEnv": [
+        {
+          "humanReadableKey": "Liv. Env.",
+          "date": "",
+          "school": "",
+          "mark": ""
+        }
+      ],
+      "chem": [
+        {
+          "mark": "",
+          "humanReadableKey": "Chemistry",
+          "date": "",
+          "school": ""
+        }
+      ],
+      "physics": [
+        {
+          "humanReadableKey": "Physics",
+          "date": "",
+          "school": "",
+          "mark": ""
+        }
+      ],
+      "earth": [
+        {
+          "humanReadableKey": "Earth Sci",
+          "date": "",
+          "school": "",
+          "mark": ""
+        }
+      ],
+      "lote": [
+        {
+          "humanReadableKey": "LOTE",
+          "date": "",
+          "school": "",
+          "mark": ""
+        }
+      ],
+      "ccEla": [
+        {
+          "humanReadableKey": "CC ELA",
+          "date": "",
+          "school": "",
+          "mark": ""
+        }
+      ],
+      "compEla": [
+        {
+          "date": "",
+          "school": "",
+          "mark": "",
+          "humanReadableKey": "English"
+        }
+      ],
+      "intAlg": [
+        {
+          "school": "",
+          "mark": "",
+          "humanReadableKey": "Algebra",
+          "date": ""
+        }
+      ],
+      "ccAlg": [
+        {
+          "mark": "",
+          "humanReadableKey": "CC Algebra",
+          "date": "",
+          "school": ""
+        }
+      ],
+      "geom": [
+        {
+          "date": "",
+          "school": "",
+          "mark": "",
+          "humanReadableKey": "Geom"
+        }
+      ],
+      "trig": [
+        {
+          "humanReadableKey": "Trig",
+          "date": "",
+          "school": "",
+          "mark": ""
+        }
+      ],
+      "us": [
+        {
+          "school": "",
+          "mark": "",
+          "humanReadableKey": "U.S.",
+          "date": ""
+        }
+      ]
     }
   },
-  "studentProgramDetails": [],
+  "schoolDetails": {
+    "schoolNick": "PS 067",
+    "district": 13,
+    "termStructure": 2,
+    "schoolId": "13K067",
+    "schoolName": "P.S. 067 Charles A. Dorsey"
+  },
+  "spedDetails": {
+    "iep": "No",
+    "program": null,
+    "potentialSafetyNet": null,
+    "isSped": null,
+    "wheelchair": null
+  },
+  "studentDetails": {
+    "cell": null,
+    "summerSchool": {
+      "attendedInPriorSy": true,
+      "attendanceBySy": [
+        {
+          "year": "SY2014-15",
+          "attended": true
+        }
+      ]
+    },
+    "classOrGrade": "02",
+    "currGradeLevel": "02",
+    "dischargeCode": null,
+    "testingModifications": {
+      "allMods": [
+
+      ],
+      "codeString": null
+    },
+    "gender": "F",
+    "classOf": "2014",
+    "sendingSchool": "non-DOE",
+    "email": null,
+    "slc": null,
+    "name": {
+      "first": "ZAMAYA",
+      "last": "YOUNG",
+      "lastFirst": "Last385397799, First2"
+    },
+    "dob": "2009-07-14",
+    "admitDate": "2013-09-09",
+    "officialClass": "201",
+    "skedulaProfile": "https://www.skedula.com/student/?id=200002525",
+    "ethnicity": "Black"
+  },
+  "studentProgramDetails": {
+    "currCourses": null,
+    "studentProgramSummary": [
+      {
+        "maxMpHighFailing": "",
+        "courses": [
+          {
+            "creditValue": "",
+            "code": "",
+            "title": "",
+            "period": "",
+            "priority": "",
+            "grades": {
+              "mp2": "",
+              "mp3": "",
+              "mp4": "",
+              "mp6": "",
+              "mp7": "",
+              "final": "",
+              "mp1": "",
+              "mp5": "",
+              "mp8": ""
+            },
+            "subjectArea": "",
+            "creditArea": "",
+            "section": "",
+            "teacher": ""
+          }
+        ],
+        "term": null,
+        "maxMpAllFailing": ""
+      }
+    ],
+    "currSy": [
+
+    ]
+  },
+  "studentProfile": "200002525    02000.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000          000.          000.          000.          000.          000.          000.          000.          000.          000.N0.000.000.000.000.000.00.95.97.961                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             __                                                                                                                                                                                                                                                                                         __",
   "transferDetails": {
     "yearOfEntry": "SY2013-14",
-    "countOfAdmitsToCurrentSchool": 2,
+    "countOfAdmitsToCurrSchool": 2,
     "overAgeUnderCredited": null,
-    "creditsEarnedPriorToFirstEntry": null,
-    "creditsEarnedBucketPriorToCurrSy": null,
+    "creditsEarnedBucketPriorToCurrSy": "<11 Credits",
     "regentsPassedAt65PlusPriorToFirstEntry": 0,
-    "intakeElaAssessmentData": "ph",
     "isSenior": null,
+    "ageOn1231ThisSy": 7,
+    "creditsEarnedPriorToFirstEntry": 0,
+    "intakeElaAssessmentData": "ph",
     "intakeMathAssessmentData": "ph",
-    "ageOn1231ThisSy": 6,
+    "isTransfer": false,
     "mostAtRisk": true
   },
-  "charterDetails": null,
-  "studentProfile": "834766314    01000.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000          000.          000.          000.          000.          000.          000.          000.          000.          000.N0.000.000.000.000.000.00000.95.97.98                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           __                                                                                                                                                                                                                                                                                         __",
-  "supportProgramDetails": [],
   "gradPlanningDetails": {
-    "plannedDiplomaType": "",
-    "plannedGraduationDate": "June 2016",
+    "plannedDiplomaType": "No plan",
+    "plannedGraduationDate": "",
     "plannedEndorsementsCertsCreds": "",
     "plannedPostSecondary": "",
     "plannedCunyBenchmarks": null,
     "localEligible": null,
     "planned10PlusInSy": null,
     "applyingToCuny": null,
-    "hotList": null,
     "schoolVerifiedSafetyNetEligibility": null
   },
-  "nextScheduledRegents": [],
+  "nextScheduledRegents": {
+    "global": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "us": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "english": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "ccEla": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "algebra": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "ccAlgebra": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "geom": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "ccGeom": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "trig": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "ccTrig": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "lifeSci": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "chem": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "physics": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "earthSci": {
+      "adminDate": null,
+      "examLanguage": null
+    },
+    "lote": {
+      "adminDate": null,
+      "examLanguage": null
+    }
+  },
   "notes": {
     "sorterDiplomaNotes": "",
     "sorterNvNotes": "",
     "sorterSchoolNotes": "",
     "sorterAdditionalNotes": "",
     "sorterPostSecondaryNotes": "",
-    "planningNotes": []
+    "planningNotes": [
+
+    ]
   },
-  "altContacts": [],
+  "altContacts": [
+
+  ],
   "atsMetaData": {
     "adult1": {
       "email": "",
       "flag": "",
       "isCell": false,
-      "notes": []
+      "notes": [
+
+      ]
     },
     "adult2": {
       "email": "",
       "flag": "",
       "isCell": false,
-      "notes": []
+      "notes": [
+
+      ]
     },
     "adult3": {
       "email": "",
       "flag": "",
       "isCell": false,
-      "notes": []
+      "notes": [
+
+      ]
     },
     "home": {
       "email": "",
       "flag": "",
       "isCell": false,
-      "notes": []
+      "notes": [
+
+      ]
     }
   },
   "supportStaff": {
-    "guidanceCounselor": "Jared Carrano",
-    "guidanceCounselorEmail": "jcarrano@newvisions.org",
+    "guidanceCounselor": "",
+    "guidanceCounselorEmail": "",
     "advisor": "",
     "advisorEmail": ""
   },
   "sorterDetails": {
-    "advisor": {
-      "name": "",
-      "email": ""
-    },
-    "counselor": {
-      "name": "",
-      "email": ""
-    },
-    "parentEmail": "",
-    "communitySchoolSupports": [],
     "flagToTakeAction": "",
     "actionNeeded": "",
     "customStudentGrouping": ""
+  },
+  "studentContactDetails": {
+    "email": null,
+    "mobile": null,
+    "parentEmail": null
   }
 }
