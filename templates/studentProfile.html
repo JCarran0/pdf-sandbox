@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 <style>
   /**{
     border: 1px solid gray;
@@ -5,7 +7,7 @@
 
   html,
   body {
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 10px;
     -webkit-print-color-adjust: exact;
     box-sizing: border-box;
@@ -16,9 +18,7 @@
     width: 100%;
   }
 
-  .break {
-    page-break-after: always;
-  }
+  /* Table styling */
 
   table {
     font-size: 10px;
@@ -38,6 +38,7 @@
     border: 1px solid gray;
   }
 
+  /* Section styling */
   div.inline-block-section {
     display: inline-block;
     margin-right: 8px;
@@ -45,6 +46,22 @@
 
   div.section {
     margin: 8px 0;
+  }
+
+  /* On/Off track stuff */
+
+  .bg-off-track {
+    background: #F4CCCC;
+  }
+
+  .bg-on-track {
+    background: #D9EAD3;
+  }
+
+  /* Utilities */
+
+  .page-break {
+    page-break-after: always;
   }
 
   .bold {
@@ -57,14 +74,6 @@
 
   .size-8 {
     font-size: 8px;
-  }
-
-  .bg-off-track {
-    background: #F4CCCC;
-  }
-
-  .bg-on-track {
-    background: #D9EAD3;
   }
 
   .font-center {
@@ -99,7 +108,7 @@
 
 <body>
   {#students}
-  <div class="page break">
+  <div class="page page-break">
 
     <div class="size-8">
       <span>Official Class: </span><span>{studentDetails.officialClass}</span>
@@ -548,7 +557,7 @@
   </div>
   <!-- end page 1 -->
 
-  <div class="page{@sep} break{/sep}">
+  <div class="page{@sep} page-break{/sep}">
     <span>{studentDetails.name.lastFirst}</span>
     <div class="section">
       <span class="bold">Your Course History:</span>
