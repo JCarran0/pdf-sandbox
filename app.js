@@ -13,12 +13,7 @@ const studentFixture = fs.readFileSync('./fixtures/student.json', 'utf8');
 const pdfOptions = {
   format: 'Letter',
   timeout: 60000,
-  border: {
-    top: '.75in',
-    right: '.5in',
-    bottom: '.5in',
-    left: '.5in'
-  },
+  border: "0",
   footer: {
     height: '.2in',
     contents: '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>'
