@@ -2,7 +2,6 @@
 
 const gulp = require('gulp');
 const dust = require('gulp-dust');
-const watch = require('gulp-watch');
 
 gulp.task('default', ['watch']);
 
@@ -13,8 +12,9 @@ gulp.task('compile', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', function() {
-  watch([
+gulp.task('watch', function () {
+  console.log('watching...')
+  gulp.watch([
     './*.js',
     './templates/*.html'
     ], ['compile']);
