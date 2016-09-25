@@ -1,127 +1,175 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 <style>
-  /**{
-    border: 1px solid gray;
-  }*/
 
-  html,
-  body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
-    -webkit-print-color-adjust: exact;
-    box-sizing: border-box;
-  }
+/**{
+  border: 1px solid gray;
+}*/
 
-  .page {
-    position: relative;
-    width: 100%;
-  }
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  -webkit-print-color-adjust: exact;
+  box-sizing: border-box;
+  background: #fff;
+}
 
-  /* Table styling */
+.page {
+  position: relative;
+  width: 100%;
+}
 
-  table {
-    font-size: 10px;
-    border-collapse: collapse;
-  }
+/* Table styling */
 
-  tr {
-    border-bottom: 1px solid white;
-  }
+pr-table {
+  font-size: 10px;
+  border-collapse: collapse;
+}
 
-  td {
-    height: 16px;
-    padding: 2px 6px;
-  }
+pr-tr {
+  border-bottom: 1px solid white;
+}
 
-  div.table-border-grey table, div.table-border-grey tr {
-    border: 1px solid gray;
-  }
+pr-td {
+  height: 16px;
+  padding: 2px 6px;
+}
 
-  /* Section styling */
-  div.inline-block-section {
-    display: inline-block;
-    margin-right: 8px;
-  }
+div.table-border-grey table, div.table-border-grey tr {
+  border: 1px solid gray;
+}
 
-  div.section {
-    margin: 8px 0;
-  }
+/* Section styling */
+div.inline-block-section {
+  display: inline-block;
+  margin-right: 8px;
+}
 
-  /* On/Off track stuff */
+.section {
+  padding: 10px;
+}
 
-  .bg-off-track {
-    background: #F4CCCC;
-  }
+.title {
+  padding: 4px;
+  border-radius: 4px;
+  background: #000099;
+  font-size: 16px;
+}
 
-  .bg-on-track {
-    background: #D9EAD3;
-  }
+.title table {
+  width: 100%;
+}
 
-  /* Utilities */
+/* On/Off track stuff */
 
-  .page-break {
-    page-break-after: always;
-  }
+.bg-off-track {
+  background: #F4CCCC;
+}
 
-  .bold {
-    font-weight: bold;
-  }
+.bg-on-track {
+  background: #D9EAD3;
+}
 
-  .size-24 {
-    font-size: 24px;
-  }
+/* Utilities */
 
-  .size-8 {
-    font-size: 8px;
-  }
+.page-break {
+  page-break-after: always;
+}
 
-  .font-center {
-    text-align: center;
-  }
+.bold {
+  font-weight: bold;
+}
 
-  .bg-dark-green {
-    background: #B6D7A8;
-  }
+.size-36 {
+  font-size: 36px;
+}
 
-  .bg-grey {
-    background: #CCCCCC;
-  }
+.size-24 {
+  font-size: 24px;
+}
 
-  .bg-dark-grey {
-    background: #434343;
-    color: white;
-  }
+.size-8 {
+  font-size: 8px;
+}
 
-  .bg-light-grey {
-    background: #EFEFEF;
-  }
+.size-10 {
+  font-size: 10px;
+}
 
-  .bg-blue {
-    background: #A4C2F4;
-  }
+.font-center {
+  text-align: center;
+}
 
-  .bg-light-blue {
-    background: #CFE2F3;
-  }
+.font-white {
+  color: #fff;
+}
+
+.bg-dark-green {
+  background: #B6D7A8;
+}
+
+.bg-grey {
+  background: #CCCCCC;
+}
+
+.bg-dark-grey {
+  background: #434343;
+  color: white;
+}
+
+.bg-light-grey {
+  background: #EFEFEF;
+}
+
+.bg-blue {
+  background: #A4C2F4;
+}
+
+.bg-light-blue {
+  background: #CFE2F3;
+}
 </style>
+
 
 <body>
   {#students}
   <div class="page page-break">
 
-    <div class="size-8">
+    <div class="size-10">
       <span>Official Class: </span><span>{studentDetails.officialClass}</span>
       <span>Data current through </span><span>{lastUpdateDetails.stars}</span>
     </div>
 
+    <div class="title">
 
-    <div class="section bg-light-blue">
-      <span class='size-24'>{studentDetails.name.lastFirst}</span>
-      <br>
-      <span>Graduation Date: </span><span>{gradPlanningDetails.plannedGraduationDate}</span>
-      <span>Grade Level: </span><span>{studentDetails.currentGradeLevel}</span>
-      <span>Counselor: </span><span>{supportStaff.guidanceCounselor}</span>
+      <div class="section font-white">
+        <span class='size-36'>{studentDetails.name.lastFirst}</span>
+        <br>
+
+        <table class="font-white">
+          <tr>
+            <td>Grad Date: &nbsp
+              {?studentDetails.gradPlanningDetails.plannedGraduationDate}
+                {studentDetails.gradPlanningDetails.plannedGraduationDate}
+              {:else}
+                ?????
+              {/studentDetails.gradPlanningDetails.plannedGraduationDate}
+            </td>
+
+            <td>Grade Lvl: {studentDetails.classOrGrade}</td>
+
+            <td>Counselor: &nbsp
+              {?supportStaff.guidanceCounselor}
+                {supportStaff.guidanceCounselor}
+              {:else}
+                Unknown
+              {/supportStaff.guidanceCounselor}
+            </td>
+          </tr>
+        </table>
+
+      </div>
     </div>
 
     <div class="section table-border-grey">
