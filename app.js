@@ -1,14 +1,25 @@
 'use strict';
 
-let http = require('http');
-let url = require('url') ;
+const http = require('http');
+const url = require('url');
 const PORT = 8080;
 
-let fs = require('fs');
-let pdf = require('html-pdf');
-let dust = require('dustjs-helpers');
-let _ = require('lodash');
-let studentFixture = fs.readFileSync('./fixtures/student.json', 'utf8');
+const fs = require('fs');
+const pdf = require('html-pdf');
+const dust = require('dustjs-helpers');
+const _ = require('lodash');
+const studentFixture = fs.readFileSync('./fixtures/student.json', 'utf8');
+
+const pdfOptions = {
+  format: 'Letter',
+  timeout: 60000,
+  border: "0",
+  footer: {
+    height: '.2in',
+    contents: '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>'
+  }
+};
+
 
 http.createServer((request, response) => {
 
@@ -19,66 +30,40 @@ http.createServer((request, response) => {
 
   console.log('Number of copies to make:', numberOfCopies);
 
-  let studentFixtures = makeCopies(JSON.parse(studentFixture), numberOfCopies);
-
   //Pre-compile (via gulp) and render precompiled file at runtime
-  let compiled = fs.readFileSync('./dist/studentProfile.js', 'utf8');
-  dust.loadSource(compiled);
+  let compiledTemplate = fs.readFileSync('./dist/studentProfile.js', 'utf8');
+  dust.loadSource(compiledTemplate);
 
   let data = {
-    students: studentFixtures
+    students: makeCopies(JSON.parse(studentFixture), numberOfCopies)
   };
 
-  generateProfiles(data, (err, stream) => {
-    if (err) console.error(err);
+  var html = '';
 
-    response.setHeader('Content-disposition', 'attachment; filename=Student_Profile');
-    response.setHeader('Content-type', 'application/pdf');
-
-    stream
-      .pipe(response)
-      .on('finish', () => {
-        let endTime = new Date().getTime();
-        let elapsed = (endTime - startTime) / 1000;
-        console.log('Elapsed time', elapsed, 'seconds');
-      })
-      .on('error', (err) => {
-        console.error(err);
+  // Insert data into the template
+  dust.stream('studentProfile', data)
+    .on('data', (segment) => {
+      html += segment;
+      console.log('new segment');
+    })
+    .on('end', () => {
+      const endTime = new Date().getTime();
+      const elapsed = (endTime - startTime) / 1000;
+      console.log(`Dust took ${elapsed} seconds to complete`);
+      // Converts HTML to PDF and returns a stream
+      pdf.create(html, pdfOptions).toStream((err, stream) => {
+        if (err) console.error('HTML stream ERR>>', err.message);
+        stream.pipe(response);
       });
-  });
+    })
+    .on('error', err => {
+      console.error('Dust stream ERR>>', err.message);
+    });
+
 }).listen(PORT, function () {
   console.log('Server listening on Port', PORT);
 }); // Activates this server, listening on port 8080.
 
-
-function generateProfiles(data, callback) {
-
-  var html = '';
-  // Insert data into the template
-  dust.stream('studentProfile', data)
-  .on('data', (segment) => {
-    html += segment;
-    console.log('new segment');
-  })
-  .on('end', () => {
-    let options = {
-      format: 'Letter',
-      timeout: 60000,
-      border: {
-        top: '.75in',
-        right: '.5in',
-        bottom: '.5in',
-        left: '.5in'
-      },
-      footer: {
-        height: '.2in',
-        contents: '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>'
-      }
-    };
-    // Converts HTML to PDF and returns a stream
-    pdf.create(html, options).toStream(callback);
-  });
-}
 
 
 
