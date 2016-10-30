@@ -1,0 +1,128 @@
+
+/**{
+  border: 1px solid gray;
+}*/
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  -webkit-print-color-adjust: exact;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.page {
+  position: relative;
+  width: 100%;
+}
+
+.section {
+  padding: 10px;
+}
+
+.title-bar {
+  padding: 10px 3px 3px 3px;
+}
+
+.on-track-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  border-radius: 2px;
+  display: inline-block;
+  margin: 1rem;
+  padding: 8px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.box-on-track {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  width: 200px;
+}
+
+.box-on-track-body {
+  padding-left: 10px;
+  padding-top: 4px;
+}
+
+/* On/Off track stuff */
+
+.bg-off-track {
+  background: #F4CCCC;
+}
+
+.bg-on-track {
+  background: #D9EAD3;
+}
+
+.font-off-track {
+  color: #990000;
+}
+
+.font-on-track {
+  color: #199900;
+}
+/* Utilities */
+
+.page-break {
+  page-break-after: always;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.size-36 {
+  font-size: 36px;
+}
+
+.size-24 {
+  font-size: 24px;
+}
+
+.size-8 {
+  font-size: 8px;
+}
+
+.size-10 {
+  font-size: 10px;
+}
+
+.font-center {
+  text-align: center;
+}
+
+.font-white {
+  color: #fff;
+}
+
+.bg-dark-green {
+  background: #B6D7A8;
+}
+
+.bg-grey {
+  background: #CCCCCC;
+}
+
+.bg-dark-grey {
+  background: #434343;
+  color: white;
+}
+
+.bg-light-grey {
+  background: #EFEFEF;
+}
+
+.bg-blue {
+  background: #A4C2F4;
+}
+
+.bg-light-blue {
+  background: #CFE2F3;
+}
+
+

@@ -50,11 +50,19 @@ http.createServer((request, response) => {
       const endTime = new Date().getTime();
       const elapsed = (endTime - startTime) / 1000;
       console.log(`Dust took ${elapsed} seconds to complete`);
-      // Converts HTML to PDF and returns a stream
-      pdf.create(html, pdfOptions).toStream((err, stream) => {
-        if (err) console.error('HTML stream ERR>>', err.message);
-        stream.pipe(response);
+
+      fs.writeFile('helloworld.html', html, function (err) {
+        if (err) return console.log(err);
+        console.log('File written successfully');
       });
+
+
+
+      // // Converts HTML to PDF and returns a stream
+      // pdf.create(html, pdfOptions).toStream((err, stream) => {
+      //   if (err) console.error('HTML stream ERR>>', err.message);
+      //   stream.pipe(response);
+      // });
     })
     .on('error', err => {
       console.error('Dust stream ERR>>', err.message);

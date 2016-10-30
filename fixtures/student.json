@@ -17,7 +17,7 @@
         "daysAbsent": 0,
         "daysLate": 0,
         "percentPresentCat": "95+%",
-        "percentPresent": 1
+        "percentPresent": 0.90
       },
       "last10Days": {
         "abs": 9,
@@ -30,7 +30,7 @@
     },
     "priorSy": {
       "year": "SY2015-16",
-      "finalPercentPresent": 0.96,
+      "finalPercentPresent": 0.89,
       "finalPercentLate": 0.067,
       "ytd": {
         "percentPresent": null
@@ -38,11 +38,11 @@
     },
     "twoSyPrior": {
       "year": "SY2014-15",
-      "finalPercentPresent": 0.97
+      "finalPercentPresent": 0.91
     },
     "threeSyPrior": {
       "year": "SY2013-14",
-      "finalPercentPresent": 0.95
+      "finalPercentPresent": 0.89
     },
     "eighthGrade": {
       "finalPercentPresent": null

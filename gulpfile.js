@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const dust = require('gulp-dust');
 const nodemon = require('gulp-nodemon');
+const render = require('./render.js');
 
 gulp.task('default', ['watch']);
 
@@ -13,7 +14,7 @@ gulp.task('compile', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', ['compile'], function () {
   console.log('watching...');
   gulp.watch([
     './*.js',
@@ -21,10 +22,15 @@ gulp.task('watch', function () {
     ], ['compile']);
 });
 
-gulp.task('start', ['watch'], function () {
+gulp.task('start', function () {
   nodemon({
-    script: 'app.js',
+    script: 'render.js',
     ext: 'js html',
-    env: { 'NODE_ENV': 'development' }
+    tasks: ['compile'],
+    delay: '2500'
   });
+});
+
+gulp.task('render', function () {
+  return render();
 });

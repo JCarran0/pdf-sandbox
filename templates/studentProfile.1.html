@@ -1,0 +1,1018 @@
+<!--<head>-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
+		crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
+		crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main.css">
+<!--</head>-->
+
+
+<body>
+	{#students}
+	<div class="page page-break">
+
+		<div class="size-10">
+			<span>O
+        Official Class: </span><span>{studentDetails.officialClass}</span>
+			<span> -- Data current through </span><span>{lastUpdateDetails.stars}</span>
+		</div>
+
+		<div class="title">
+
+			<div class="section font-white">
+				<span class='size-36'>{studentDetails.name.lastFirst}</span>
+				<br>
+
+				<table class="font-white">
+					<tr>
+						<td>Grad Date: &nbsp {?studentDetails.gradPlanningDetails.plannedGraduationDate} {studentDetails.gradPlanningDetails.plannedGraduationDate}
+							{:else} ?????? {/studentDetails.gradPlanningDetails.plannedGraduationDate}
+						</td>
+
+						<td>Grade Lvl: {studentDetails.classOrGrade}</td>
+
+						<td>Counselor: &nbsp {?supportStaff.guidanceCounselor} {supportStaff.guidanceCounselor} {:else} Unknown {/supportStaff.guidanceCounselor}
+						</td>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+
+
+
+
+
+		{#attendanceDetails}
+
+		<div class="section table-border-grey">
+			<span class="bold">Your Attendance:</span>
+			<div>
+				<div class="inline-block-section">
+
+
+
+					<table>
+						{#currSy}
+						<tr>
+							<td class="bg-grey">
+								{year}
+							</td>
+						</tr>
+						{#ytd}
+
+						<tr>
+							<td class='
+                {@select key=percentPresent}
+                  {@none}bg-off-track {/none}
+                  {@gte value="0.9" type="number"}bg-on-track{/gte}
+                {/select}
+              '>
+								<span>
+                  {percentPresentCat}
+                </span>
+							</td>
+						</tr>
+						{/ytd} {/currSy}
+					</table>
+				</div>
+				<div class="inline-block-section">
+					<table>
+						<tr>
+							<td class="bg-grey">2013-14</td>
+						</tr>
+						<tr>
+							<td><span>*87%</span></td>
+						</tr>
+					</table>
+				</div>
+				<div class="inline-block-section">
+					<table>
+						<tr>
+							<td class="bg-grey">2014-15</td>
+						</tr>
+						<tr>
+							<td><span>*81%</span></td>
+						</tr>
+					</table>
+				</div>
+				<div class="inline-block-section">
+					<table>
+						<tr>
+							<td class="bg-grey">2015-16</td>
+						</tr>
+						<tr>
+							<td class="bg-off-track"><span>*55%</span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		{/attendanceDetails}
+
+		<div class="section">
+			<span class="bold">Your Course Schedule:</span>
+			<table>
+				<tr>
+					<td class="bg-grey">Pd.</td>
+					<td class="bg-grey">Course</td>
+					<td class="bg-grey">Code</td>
+					<td class="bg-grey">Credit</td>
+					<td class="bg-grey">Teacher</td>
+					<td class="bg-grey">MP1</td>
+					<td class="bg-grey">MP2</td>
+					<td class="bg-grey">MP3</td>
+					<td class="bg-dark-grey">Subject</td>
+				</tr>
+				<tr>
+					<td class="bg-grey">1</td>
+					<td>English 9 2 of 2</td>
+					<td>EES82</td>
+					<td>1</td>
+					<td>Teacher 948</td>
+					<td>45</td>
+					<td>45</td>
+					<td>.</td>
+					<td>Core ELA</td>
+				</tr>
+				<tr>
+					<td class="bg-grey">3</td>
+					<td>US HISTORY 2 OF 2</td>
+					<td>HUS22</td>
+					<td>1</td>
+					<td>Teacher 1140</td>
+					<td>55</td>
+					<td>45</td>
+					<td>.</td>
+					<td>U.S. History</td>
+				</tr>
+				<tr>
+					<td class="bg-grey">4</td>
+					<td>LIVING ENV 2 OF 4</td>
+					<td>SLS42</td>
+					<td>1</td>
+					<td>Teacher 3045</td>
+					<td>45</td>
+					<td>45</td>
+					<td>.</td>
+					<td>Life Sci/Liv Env</td>
+				</tr>
+				<tr>
+					<td class="bg-grey">7</td>
+					<td>INTEGRATED ALGEBRA 4 OF 4</td>
+					<td>MES44</td>
+					<td>1</td>
+					<td>Teacher 1960</td>
+					<td>45</td>
+					<td>45</td>
+					<td>.</td>
+					<td>Math/Algebra</td>
+				</tr>
+				<tr>
+					<td class="bg-grey"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="bg-grey"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="bg-grey"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="bg-grey"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="bg-grey"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="bg-grey"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="section">
+
+			<div class="inline-block-section">
+				<span class="bold">Your Credits:	</span><span>Transcript Average:	</span><span>56.03</span>
+				<br>
+				<table>
+					<tr>
+						<td class="bg-grey"></td>
+						<td class="bg-grey">Earned</td>
+						<td class="bg-grey">Sched'd</td>
+						<td class="bg-grey">Req'd</td>
+						<td class="bg-grey">Status*</td>
+					</tr>
+					<tr>
+						<td class="bg-grey">ELA</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Math</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Global</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">U.S.</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Part. in Gov't</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Econ</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Total Science</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Physical Sci.</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Life Science</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">LOTE</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">CTE</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Art</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">PE</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Health</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Electives</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Total</td>
+						<td></td>
+						<td></td>
+						<td class="bg-light-grey"></td>
+						<td></td>
+					</tr>
+
+				</table>
+			</div>
+
+			<div class="inline-block-section">
+				<span class="bold">Your Regents:	</span>
+				<br> {#regentsDetails}
+				<table>
+					<tr>
+						<td colspan="5" class="bg-dark-green font-center">4 Required</td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Subject</td>
+						<td class="bg-grey">Exam</td>
+						<td class="bg-grey">Score</td>
+						<td class="bg-grey">Att.'s</td>
+						<td class="bg-grey">Next Att.</td>
+					</tr>
+					<tr>
+						<td class="bg-grey">ELA</td>
+						<td></td>
+						<td class="
+              {@select key=maxScoreEla.num}
+                {@lt  value=65 type=number} bg-off-track{/lt}
+                {@gte value=65 type=number} bg-on-track{/gte}
+              {/select}
+            ">{maxScoreEla.string}</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Math</td>
+						<td></td>
+						<td class="
+              {@select key=maxScoreMath.num}
+                {@lt  value=65 type=number} bg-off-track{/lt}
+                {@gte value=65 type=number} bg-on-track{/gte}
+              {/select}
+            ">{maxScoreMath.string}</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Science</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">SS</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="5" class="bg-dark-green font-center">+1 Option (Must pass one)</td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Subject</td>
+						<td class="bg-grey">Exam</td>
+						<td class="bg-grey">Score</td>
+						<td class="bg-grey">Att.'s</td>
+						<td class="bg-grey">Next Att.</td>
+					</tr>
+					<tr>
+						<td class="bg-grey">2nd Math</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">2nd Science</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">2nd SS</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+
+					<tr>
+						<td colspan="5" class="bg-blue font-center">Advanced Regents (Must pass all above as well)</td>
+					</tr>
+					<tr>
+						<td class="bg-grey">Subject</td>
+						<td class="bg-grey">Exam</td>
+						<td class="bg-grey">Score</td>
+						<td class="bg-grey">Att.'s</td>
+						<td class="bg-grey">Next Att.</td>
+					</tr>
+					<tr>
+						<td class="bg-grey">3rd Math</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="bg-grey">LOTE</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+				{/regentsDetails}
+			</div>
+		</div>
+	</div>
+	<!-- end page 1 -->
+
+	<div class="page{@sep} page-break{/sep}">
+		<span>{studentDetails.name.lastFirst}</span>
+		<div class="section">
+			<span class="bold">Your Course History:</span>
+			<div>
+				<div class="inline-block-section">
+					<table>
+						<tr>
+							<td class="bg-grey">Subject</td>
+							<td class="bg-grey">School</td>
+							<td class="bg-grey">Date</td>
+							<td class="bg-grey">Course</td>
+							<td class="bg-grey">Credit</td>
+							<td class="bg-grey">Mark</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="inline-block-section">
+					<table>
+						<tr>
+							<td class="bg-grey">Subject</td>
+							<td class="bg-grey">School</td>
+							<td class="bg-grey">Date</td>
+							<td class="bg-grey">Course</td>
+							<td class="bg-grey">Credit</td>
+							<td class="bg-grey">Mark</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- end course history section -->
+
+		<div class="section">
+			<span class="bold">Your Regents History:</span>
+			<div>
+				<div class="inline-block-section">
+					<table>
+						<tr>
+							<td class="bg-grey">Exam</td>
+							<td class="bg-grey">Date</td>
+							<td class="bg-grey">Score</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="inline-block-section">
+					<span></span>
+					<table>
+						<tr>
+							<td class="bg-grey">Exam</td>
+							<td class="bg-grey">Date</td>
+							<td class="bg-grey">Score</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="inline-block-section">
+					<span></span>
+					<table>
+						<tr>
+							<td class="bg-grey">Exam</td>
+							<td class="bg-grey">Date</td>
+							<td class="bg-grey">Score</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- end regents history section -->
+
+	</div>
+	<!-- end page 2 -->
+	{/students}
+</body>
